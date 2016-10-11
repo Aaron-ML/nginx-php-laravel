@@ -1,3 +1,5 @@
+## This is a clone of ngineered/nginx-php-fpm updated specifically for Laravel
+
 ## Introduction
 This is a Dockerfile to build a container image for nginx and php-fpm, with the ability to pull website code from git. The container also has the ability to update templated files with variables passed to docker in order to update your settings. There is also support for lets encrypt SSL support.
 
