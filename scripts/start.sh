@@ -92,6 +92,12 @@ fi
 # Always chown webroot for better mounting
 chown -Rf nginx.nginx /var/www/html
 
+# Chown laravel storage folder
+nginx:nginx -R /var/www/html/storage
+
+# Update composer at laravel root
+cd /var/www/html/ && composer update
+
 # Run custom scripts
 if [[ "$RUN_SCRIPTS" == "1" ]] ; then
   if [ -d "/var/www/html/scripts/" ]; then
